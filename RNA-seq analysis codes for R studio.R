@@ -1,6 +1,6 @@
 
 #data clearing
-tmp <- read.csv("List S5-counts of gene expression.csv", header=T) 
+tmp <- read.csv("counts of gene expression.csv", header=T) 
 
 rownames(tmp) <- tmp[,2]
 tmp <- tmp[,-c(1,2)]
@@ -15,7 +15,7 @@ tmp <- tmp[,o]
 cc <- tmp 
 ccl <- apply(cc, c(1,2), function(x) log(x+1))
 
-annot <- read.table("List S6-genes list", sep="\t", header=F) 
+annot <- read.table("genes list", sep="\t", header=F) 
 rownames(annot) <- annot[,1]
 
 
